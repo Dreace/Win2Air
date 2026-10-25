@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap7="http://schemas.microsoft.com/appx/manifest/uap/windows10/7" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap uap7 desktop rescap">
+  <Identity Name="@PACKAGE_IDENTITY_NAME@" Publisher="@PACKAGE_IDENTITY_PUBLISHER@" Version="0.1.1.0" ProcessorArchitecture="x64" />
+  <Properties><DisplayName>Win2Air</DisplayName><PublisherDisplayName>@PACKAGE_PUBLISHER_DISPLAY_NAME@</PublisherDisplayName><Logo>Assets\StoreLogo.png</Logo></Properties>
+  <Dependencies><TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19045.0" MaxVersionTested="10.0.26100.0" /></Dependencies>
+  <Resources><Resource Language="en-US" /><Resource Language="zh-CN" /></Resources>
+  <Applications><Application Id="App" Executable="Win2Air.exe" EntryPoint="Windows.FullTrustApplication">
+    <uap:VisualElements DisplayName="Win2Air" Description="Win2Air" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" BackgroundColor="transparent" />
+    <Extensions>
+      <desktop:Extension Category="windows.startupTask" Executable="Win2Air.exe" EntryPoint="Windows.FullTrustApplication"><desktop:StartupTask TaskId="Win2AirStartup" Enabled="false" DisplayName="Win2Air" /></desktop:Extension>
+      <uap:Extension Category="windows.protocol"><uap:Protocol Name="win2air"><uap:DisplayName>Win2Air</uap:DisplayName></uap:Protocol></uap:Extension>
+
+    </Extensions>
+  </Application></Applications>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>WinRT.Host.dll</Path>
+        <ActivatableClass ActivatableClassId="Win2Air.Charts.TelemetryChart" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Win2Air.Charts.Win2Air_Charts_XamlTypeInfo.XamlMetaDataProvider" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>SkiaSharp.Views.WinUI.Native.dll</Path>
+        <ActivatableClass ActivatableClassId="SkiaSharp.Views.WinUI.Native.BufferExtensions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="SkiaSharp.Views.WinUI.Native.PropertySetExtensions" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
+  <Capabilities><rescap:Capability Name="runFullTrust" /><uap7:Capability Name="globalMediaControl" /></Capabilities>
+</Package>

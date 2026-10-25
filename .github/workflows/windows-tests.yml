@@ -1,0 +1,41 @@
+name: Windows behavioral tests
+
+on:
+  pull_request:
+    paths:
+      - 'win2air-app/**'
+      - 'airplay2-sender-core/**'
+      - '.github/workflows/windows-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: [self-hosted, Windows, X64, win2air]
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        configuration: [Debug, Release]
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      DEPENDENCY_PREFIX: ${{ vars.WIN2AIR_DEPENDENCY_PREFIX }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - name: Build sender
+        run: |
+          if (-not $env:DEPENDENCY_PREFIX) { throw 'Set WIN2AIR_DEPENDENCY_PREFIX to the prepared native dependency prefix.' }
+          cmake "-DDEPENDENCY_PREFIX=$env:DEPENDENCY_PREFIX" -P win2air-app/scripts/build-sender.cmake
+      - name: Test sender contracts
+        run: ctest --test-dir airplay2-sender-core/out/windows-app-dll -R '^contract\.(target_probe|timed_audio|volume_command|presentation|snapshot)$' --no-tests=error --output-on-failure
+      - name: Build console tests
+        run: cmake -DTESTS_ONLY=ON -DCONFIGURATION=${{ matrix.configuration }} "-DDEPENDENCY_PREFIX=$env:DEPENDENCY_PREFIX" -P win2air-app/scripts/build-app.cmake
+      - name: Run offline tests
+        run: cmake -DCONFIGURATION=${{ matrix.configuration }} -P win2air-app/tests/run-offline.cmake

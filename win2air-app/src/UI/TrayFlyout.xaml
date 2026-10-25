@@ -1,0 +1,25 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="{ThemeResource AirBackgroundBrush}" Padding="16">
+  <StackPanel Spacing="12">
+    <Border Style="{StaticResource AirCardStyle}" Padding="16"><StackPanel Spacing="10">
+      <Grid ColumnSpacing="12">
+        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+        <StackPanel Spacing="4" VerticalAlignment="Center">
+          <Grid x:Name="TrayIdentity" ColumnSpacing="8" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+            <TextBlock x:Name="TrayReceiver" FontSize="20" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" TextLineBounds="Tight" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+              <Ellipse x:Name="TrayStateIndicator" Width="8" Height="8" Fill="{ThemeResource AirSuccessBrush}" Visibility="Collapsed" VerticalAlignment="Center" />
+              <TextBlock x:Name="TrayState" FontSize="12" TextLineBounds="Tight" VerticalAlignment="Center" Foreground="{ThemeResource AirSecondaryBrush}" />
+            </StackPanel>
+          </Grid>
+          <TextBlock x:Name="TrayReceiverModel" FontSize="12" TextTrimming="CharacterEllipsis" Foreground="{ThemeResource AirSecondaryBrush}" />
+        </StackPanel>
+        <Button x:Name="TrayConnection" Grid.Column="1" VerticalAlignment="Center" Style="{StaticResource AirActionStyle}" />
+      </Grid>
+      <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions><SymbolIcon Symbol="Volume" Foreground="{ThemeResource AirSecondaryBrush}" /><Slider x:Name="TrayReceiverVolume" Grid.Column="1" Minimum="0" Maximum="100" StepFrequency="1" VerticalAlignment="Center" /><TextBlock x:Name="TrayVolumeValue" Grid.Column="2" MinWidth="40" TextAlignment="Right" VerticalAlignment="Center" /><ToggleButton x:Name="TrayReceiverMuted" Grid.Column="3" Width="44" Height="44" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"><FontIcon x:Name="TrayMuteIcon" Glyph="&#xE15D;" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" /></ToggleButton></Grid>
+    </StackPanel></Border>
+    <TextBlock x:Name="TrayError" TextWrapping="Wrap" IsTextSelectionEnabled="True" Foreground="{ThemeResource AirErrorBrush}" />
+    <Button x:Name="TraySwitch" HorizontalAlignment="Stretch" Style="{StaticResource AirActionStyle}" />
+    <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions><Button x:Name="TrayOpen" HorizontalAlignment="Stretch" Style="{StaticResource AirActionStyle}" /><Button x:Name="TrayExit" Grid.Column="1" HorizontalAlignment="Stretch" Style="{StaticResource AirActionStyle}" /></Grid>
+  </StackPanel>
+</Border>

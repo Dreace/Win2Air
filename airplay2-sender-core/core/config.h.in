@@ -1,0 +1,6 @@
+#ifndef SENDER_BUILD_CONFIG_H
+#define SENDER_BUILD_CONFIG_H
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_DECL_PLIST_NEW_INT 0
+#define PACKAGE_NAME "airplay2-sender-core"
+#endif

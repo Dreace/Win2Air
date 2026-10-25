@@ -1,0 +1,58 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="{ThemeResource AirBackgroundBrush}">
+  <Grid.RowDefinitions><RowDefinition Height="*" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+  <ScrollViewer x:Name="PlaybackScroll" Padding="32,32,32,24" HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch">
+    <StackPanel x:Name="PlaybackColumn" Spacing="24" HorizontalAlignment="Left">
+      <Button x:Name="AccentSample" Style="{StaticResource AirAccentButtonStyle}" Visibility="Collapsed" IsTabStop="False" />
+      <Border x:Name="CurrentReceiverCard" Style="{StaticResource AirCardStyle}" Padding="28">
+        <StackPanel Spacing="24">
+          <Grid ColumnSpacing="20">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+            <StackPanel MinWidth="0" Spacing="4" VerticalAlignment="Center">
+              <Grid x:Name="CurrentIdentity" ColumnSpacing="12">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" MinWidth="0" /></Grid.ColumnDefinitions>
+                <TextBlock x:Name="CurrentName" FontSize="27" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" TextLineBounds="Tight" VerticalAlignment="Center" Foreground="{ThemeResource AirTextBrush}" />
+                <StackPanel x:Name="CurrentStatus" Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center"><Ellipse x:Name="CurrentStatusIndicator" Width="8" Height="8" Fill="{ThemeResource AirSuccessBrush}" Visibility="Collapsed" VerticalAlignment="Center" /><TextBlock x:Name="Status" TextWrapping="NoWrap" TextLineBounds="Tight" VerticalAlignment="Center" AutomationProperties.LiveSetting="Polite" Foreground="{ThemeResource AirSecondaryBrush}" /></StackPanel>
+              </Grid>
+              <TextBlock x:Name="CurrentDetail" Style="{StaticResource AirSecondaryTextStyle}" TextTrimming="CharacterEllipsis" />
+              <TextBlock x:Name="CurrentFault" TextWrapping="Wrap" Foreground="{ThemeResource AirErrorBrush}" Visibility="Collapsed" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Spacing="8" VerticalAlignment="Center">
+              <Button x:Name="CurrentConnect" Style="{StaticResource AirActionStyle}" Visibility="Collapsed" />
+              <Button x:Name="CurrentDisconnect" Style="{StaticResource AirActionStyle}" Visibility="Collapsed" />
+            </StackPanel>
+          </Grid>
+          <Grid x:Name="CurrentVolumeRow" ColumnSpacing="16">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+            <SymbolIcon Symbol="Volume" Foreground="{ThemeResource AirSecondaryBrush}" VerticalAlignment="Center" />
+            <Slider x:Name="DestinationVolume" Grid.Column="1" Minimum="0" Maximum="100" StepFrequency="1" VerticalAlignment="Center" />
+            <TextBlock x:Name="DestinationVolumeValue" Grid.Column="2" MinWidth="40" TextAlignment="Right" VerticalAlignment="Center" FontWeight="SemiBold" />
+            <ToggleButton x:Name="DestinationMuted" Grid.Column="3" Width="44" Height="44" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"><FontIcon x:Name="MuteIcon" Glyph="&#xE15D;" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" /></ToggleButton>
+            <TextBlock x:Name="VolumeHeading" Visibility="Collapsed" />
+          </Grid>
+        </StackPanel>
+      </Border>
+      <StackPanel Spacing="12">
+        <Grid ColumnSpacing="16"><Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions><TextBlock x:Name="DestinationHeading" Style="{StaticResource AirSectionStyle}" VerticalAlignment="Center" /><StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8"><Button x:Name="RefreshReceivers" Style="{StaticResource AirActionStyle}" /><Button x:Name="AddDevice" Style="{StaticResource AirActionStyle}" /></StackPanel></Grid>
+        <Border x:Name="CandidateList" CornerRadius="12" Background="{ThemeResource AirSurfaceBrush}" BorderBrush="{ThemeResource AirBorderBrush}" BorderThickness="1"><StackPanel x:Name="DeviceCards" Spacing="0" /></Border>
+        <TextBlock x:Name="Availability" Style="{StaticResource AirSecondaryTextStyle}" />
+      </StackPanel>
+    </StackPanel>
+  </ScrollViewer>
+  <Border x:Name="NowPlayingBar" Grid.Row="1" Visibility="Collapsed" Padding="32,12" BorderBrush="{ThemeResource AirBorderBrush}" BorderThickness="0,1,0,0">
+    <Grid ColumnSpacing="12">
+      <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+      <Border x:Name="NowPlayingArtworkFrame" Width="56" Height="56" CornerRadius="4" Background="{ThemeResource AirSubtleBrush}"><Image x:Name="NowPlayingArtwork" Stretch="UniformToFill" /></Border>
+      <StackPanel Grid.Column="1" Spacing="3" VerticalAlignment="Center">
+        <TextBlock x:Name="NowPlayingTitle" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" />
+        <TextBlock x:Name="NowPlayingDetails" Foreground="{ThemeResource AirSecondaryBrush}" TextTrimming="CharacterEllipsis" />
+      </StackPanel>
+    </Grid>
+  </Border>
+  <Border Grid.Row="2" Background="{ThemeResource AirSubtleBrush}" BorderBrush="{ThemeResource AirBorderBrush}" BorderThickness="0,1,0,0" Padding="32,12">
+    <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+      <FontIcon Glyph="&#xE7F4;" FontSize="16" Foreground="{ThemeResource AirSecondaryBrush}" VerticalAlignment="Center" />
+      <Grid Grid.Column="1" MinWidth="0" ColumnSpacing="12" VerticalAlignment="Center"><Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions><Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions><TextBlock x:Name="SourceHeading" Style="{StaticResource AirSecondaryTextStyle}" VerticalAlignment="Center" /><ComboBox x:Name="SourceSummary" Grid.Column="1" Style="{StaticResource AirSettingComboStyle}" /><TextBlock x:Name="SourceAvailability" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Visibility="Collapsed" /></Grid>
+      <Button x:Name="OpenAudioSettings" Grid.Column="2" Style="{StaticResource AirActionStyle}" />
+    </Grid>
+  </Border>
+</Grid>

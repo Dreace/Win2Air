@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+	</resheader>
+	<data name="CommandPending" xml:space="preserve"><value>正在处理</value></data>
+	<data name="CredentialSaveFailed" xml:space="preserve"><value>已连接，但这台设备的配对没有保存</value></data>
+	<data name="SettingsLoadFailed" xml:space="preserve"><value>设置没有读出来，原文件还在</value></data>
+	<data name="AudioSource"><value>声音来源</value></data>
+	<data name="SourceUnavailable"><value>这个输出现在不可用。</value></data>
+	<data name="Destination"><value>设备</value></data>
+	<data name="FollowDefault"><value>系统默认</value></data>
+	<data name="NoReceivers"><value>没有设备</value></data>
+	<data name="Host"><value>地址</value></data>
+	<data name="Port"><value>端口</value></data>
+	<data name="AddReceiver"><value>添加</value></data>
+	<data name="AddDevice"><value>添加设备</value></data>
+	<data name="PairingCode"><value>配对码或密码</value></data>
+	<data name="Connect"><value>连接</value></data>
+	<data name="Disconnect"><value>断开</value></data>
+	<data name="LocalPlayback"><value>电脑也播放</value></data>
+	<data name="StateDisconnected"><value>未连接</value></data>
+	<data name="StateConnecting"><value>正在连接</value></data>
+	<data name="StatePairing"><value>正在配对</value></data>
+	<data name="StateSettingUp"><value>正在准备</value></data>
+	<data name="StateReady"><value>已连接</value></data>
+	<data name="StateStreaming"><value>正在播放</value></data>
+	<data name="StatusPlaying"><value>已连接 | 正在播放</value></data>
+	<data name="StatusPaused"><value>已连接 | 暂停</value></data>
+	<data name="StatusStandby"><value>已连接 | 待机</value></data>
+	<data name="StateEnding"><value>正在断开</value></data>
+	<data name="StateError"><value>播放失败</value></data>
+	<data name="ShowHidden"><value>显示隐藏的设备</value></data>
+	<data name="ReceiverVolume"><value>音量</value></data>
+	<data name="ReceiverMuted"><value>静音</value></data>
+	<data name="ReceiverDetails"><value>设备设置</value></data>
+	<data name="ReceiverFavorite"><value>收藏</value></data>
+	<data name="ReceiverHidden"><value>从列表中隐藏</value></data>
+	<data name="ReceiverAutoConnect"><value>下次自动连接</value></data>
+	<data name="ReceiverEditName"><value>名称</value></data>
+	<data name="ReceiverHost"><value>地址</value></data>
+	<data name="ReceiverPort"><value>端口</value></data>
+	<data name="ReceiverSave"><value>保存</value></data>
+	<data name="ReceiverEndpointSave"><value>保存地址</value></data>
+	<data name="ReceiverDelete"><value>删除设备</value></data>
+	<data name="VolumePending"><value>正在确认音量</value></data>
+	<data name="ReceiverActive"><value>当前设备</value></data>
+	<data name="ReceiverInactive"><value>已保存</value></data>
+	<data name="HealthUnknown"><value>未知</value></data>
+	<data name="InvalidPort"><value>请输入 1 到 65535 之间的整数。</value></data>
+	<data name="PlaybackNavigation"><value>播放</value></data>
+	<data name="DevicesNavigation"><value>设备</value></data>
+	<data name="StatisticsNavigation"><value>统计</value></data>
+	<data name="SettingsNavigation"><value>设置</value></data>
+	<data name="StartupEnabled"><value>登录时打开</value></data>
+	<data name="StartupMinimized"><value>登录后不显示窗口</value></data>
+	<data name="RestorePrevious"><value>启动时连上上次的设备</value></data>
+	<data name="CloseToTray"><value>关闭窗口后继续播放</value></data>
+	<data name="ManageReceivers"><value>管理设备</value></data>
+	<data name="TrayOpen"><value>打开</value></data>
+	<data name="TrayExit"><value>退出</value></data>
+	<data name="NoActiveReceiver"><value>没有正在播放的设备</value></data>
+	<data name="StartupDisabledByUser"><value>启动项在任务管理器里被关掉了。请先在那里打开。</value></data>
+	<data name="StartupDisabledByPolicy"><value>系统策略不允许登录时打开。</value></data>
+	<data name="StartupEnabledByPolicy"><value>系统策略要求登录时打开。</value></data>
+	<data name="StreamingTitle"><value>延迟</value></data>
+	<data name="LatencyMode"><value>延迟</value></data>
+	<data name="LatencyLow"><value>低（120 毫秒）</value></data>
+	<data name="LatencyUltra"><value>极低（80 毫秒）</value></data>
+	<data name="LatencyAdaptive"><value>自适应（{0} 毫秒）</value></data>
+  <data name="LatencyAdaptivePending"><value>自适应</value></data>
+	<data name="LatencyBalanced"><value>均衡（1000 毫秒）</value></data>
+	<data name="LatencyStable"><value>稳定（2000 毫秒）</value></data>
+	<data name="LatencyCustom"><value>自定义（20–5000 毫秒）</value></data>
+	<data name="CustomLatency"><value>自定义延迟（毫秒）</value></data>
+	<data name="ApplyCustomLatency"><value>保存</value></data>
+	<data name="SilenceTimeout"><value>静音后暂停</value></data>
+	<data name="SilenceTen"><value>10 秒</value></data>
+	<data name="SilenceThirty"><value>30 秒</value></data>
+	<data name="SilenceSixty"><value>60 秒</value></data>
+	<data name="SilenceNever"><value>不暂停</value></data>
+	<data name="PresentationSaved"><value>延迟</value></data>
+	<data name="PresentationDefault"><value>默认延迟</value></data>
+	<data name="AutoReconnect"><value>断开后自动重连</value></data>
+	<data name="StateRecovering"><value>正在重新连接</value></data>
+	<data name="AuthenticationRequired"><value>接收端需要验证，请输入配对码或 AirPlay 密码。自动重连已停止。</value></data>
+	<data name="RetryDue"><value>下次重试</value></data>
+	<data name="HealthPoor"><value>较差</value></data>
+	<data name="HealthUnstable"><value>不稳定</value></data>
+	<data name="HealthGood"><value>良好</value></data>
+	<data name="HealthExcellent"><value>很好</value></data>
+	<data name="HistoryWindow"><value>时间</value></data>
+	<data name="HistoryMinute"><value>1 分钟</value></data>
+	<data name="HistoryTenMinutes"><value>10 分钟</value></data>
+	<data name="HistoryHour"><value>1 小时</value></data>
+	<data name="HistoryUnavailable"><value>没有记录</value></data>
+	<data name="ExportDiagnostics"><value>导出诊断</value></data>
+	<data name="CancelDiagnostics"><value>取消</value></data>
+	<data name="DiagnosticPending"><value>正在导出</value></data>
+	<data name="DiagnosticSaved"><value>已保存</value></data>
+	<data name="DiagnosticCanceled"><value>已取消</value></data>
+	<data name="DiagnosticFailed"><value>导出失败</value></data>
+	<data name="MetricUnavailable"><value>—</value></data>
+	<data name="MetricBitrate"><value>发送速度（kbit/s）</value></data>
+	<data name="MetricSentPackets"><value>已发送的包</value></data>
+	<data name="MetricSentBytes"><value>已发送的数据</value></data>
+	<data name="MetricResendRequests"><value>要求重发</value></data>
+	<data name="MetricResendSuccess"><value>重发成功</value></data>
+	<data name="MetricResendExpired"><value>来不及重发</value></data>
+	<data name="MetricPending"><value>还在处理的音频</value></data>
+	<data name="MetricQueue"><value>发送缓冲（%）</value></data>
+	<data name="MetricDiscontinuities"><value>录音中断</value></data>
+	<data name="MetricTargetLatency"><value>延迟（毫秒）</value></data>
+	<data name="MetricRecoveries"><value>重新连接次数</value></data>
+	<data name="MetricCaptured"><value>录到的音频</value></data>
+	<data name="MetricSubmitted"><value>送出的音频</value></data>
+	<data name="MetricNonzero"><value>有声音的部分</value></data>
+	<data name="MetricSessionSummary" xml:space="preserve"><value>这次播放</value></data>
+	<data name="MetricAppTotals" xml:space="preserve"><value>累计</value></data>
+	<data name="GeneralSettings"><value>外观</value></data>
+	<data name="AudioSettings"><value>声音</value></data>
+	<data name="DeviceSettings"><value>设备</value></data>
+	<data name="SettingsTheme"><value>主题</value></data>
+	<data name="SettingsLanguage"><value>语言</value></data>
+	<data name="SettingsSource"><value>声音来源</value></data>
+	<data name="FollowSystem"><value>跟随系统</value></data>
+	<data name="ThemeLight"><value>浅色</value></data>
+	<data name="ThemeDark"><value>深色</value></data>
+	<data name="LanguageChinese"><value>简体中文</value></data>
+	<data name="LanguageEnglish"><value>English</value></data>
+	<data name="PreferenceSaved"><value>已保存</value></data>
+	<data name="ReceiverForget"><value>清除配对</value></data>
+	<data name="ReceiverResetLatency"><value>重置自适应延迟</value></data>
+	<data name="CurrentReceiverCaption"><value>当前播放设备</value></data>
+	<data name="ChartNow"><value>当前</value></data>
+	<data name="ManualReceiverOptions"><value>用地址添加</value></data>
+	<data name="PairingOptions"><value>配对</value></data>
+	<data name="DialogClose"><value>关闭</value></data>
+	<data name="LatencyOptions"><value>延迟</value></data>
+	<data name="AudioOptions"><value>声音</value></data>
+	<data name="LifecycleOptions"><value>启动</value></data>
+	<data name="MetricDetails"><value>其他数据</value></data>
+	<data name="UnitFrames"><value>帧</value></data>
+	<data name="UnitPackets"><value>包</value></data>
+	<data name="UnitTimes"><value>次</value></data>
+	<data name="UnitChannels"><value>声道</value></data>
+	<data name="UnitBits"><value>位</value></data>
+	<data name="SwitchOn"><value>开</value></data>
+	<data name="SwitchOff"><value>关</value></data>
+	<data name="PairConnect"><value>用配对码连接</value></data>
+	<data name="SelectPairingTarget"><value>先选择设备</value></data>
+	<data name="CancelAction"><value>取消</value></data>
+	<data name="DeleteConsequences"><value>会停止播放，并删掉这台设备和配对。之后要重新添加。</value></data>
+	<data name="ForgetConsequences"><value>会停止播放并清除配对。设备还留在列表里。</value></data>
+	<data name="AppliedBudget"><value>当前延迟</value></data>
+	<data name="LatencyFieldInvalid"><value>请输入 20 到 5000 之间的整数。</value></data>
+  <data name="AvailableReceiversHeading" xml:space="preserve"><value>可用设备</value></data>
+  <data name="SwitchReceiverHeading" xml:space="preserve"><value>切换播放设备</value></data>
+  <data name="AudioSettingsAction" xml:space="preserve"><value>音频设置</value></data>
+  <data name="MuteAction" xml:space="preserve"><value>静音</value></data>
+  <data name="UnmuteAction" xml:space="preserve"><value>取消静音</value></data>
+  <data name="DurationLabel" xml:space="preserve"><value>连接时长</value></data>
+  <data name="LeadLabel" xml:space="preserve"><value>估算延迟</value></data>
+  <data name="BitrateLabel" xml:space="preserve"><value>发送码率</value></data>
+  <data name="HealthLabel" xml:space="preserve"><value>网络健康</value></data>
+  <data name="NetworkHeading" xml:space="preserve"><value>网络传输</value></data>
+  <data name="BufferHeading" xml:space="preserve"><value>音频缓冲</value></data>
+  <data name="ResendHeading" xml:space="preserve"><value>重传请求速率</value></data>
+  <data name="ConnectionEvents" xml:space="preserve"><value>连接事件</value></data>
+  <data name="ConnectionFound" xml:space="preserve"><value>发现设备</value></data>
+  <data name="EventPlay" xml:space="preserve"><value>播放</value></data>
+  <data name="EventPause" xml:space="preserve"><value>暂停</value></data>
+  <data name="EventStandby" xml:space="preserve"><value>待机</value></data>
+  <data name="EventLatency" xml:space="preserve"><value>延迟</value></data>
+  <data name="EventProblemQueue" xml:space="preserve"><value>发送排队超过预算。</value></data>
+  <data name="EventProblemResend" xml:space="preserve"><value>重发升高。</value></data>
+  <data name="EventProblemDiscontinuity" xml:space="preserve"><value>音频不连续。</value></data>
+  <data name="EventProblemInterrupted" xml:space="preserve"><value>采集中断。</value></data>
+  <data name="EventProblemClock" xml:space="preserve"><value>时钟不稳定。</value></data>
+  <data name="EventProblemRetarget" xml:space="preserve"><value>延迟调整失败。</value></data>
+  <data name="NetworkBytesLabel" xml:space="preserve"><value>已发送数据</value></data>
+  <data name="NetworkPacketsLabel" xml:space="preserve"><value>发送包数</value></data>
+  <data name="NetworkRequestsLabel" xml:space="preserve"><value>重传速率</value></data>
+  <data name="NetworkPendingLabel" xml:space="preserve"><value>待传包</value></data>
+  <data name="BufferQueueLabel" xml:space="preserve"><value>缓冲占用</value></data>
+  <data name="BufferPendingLabel" xml:space="preserve"><value>待编码音频包</value></data>
+  <data name="SettingsGeneralCategory" xml:space="preserve"><value>常规</value></data>
+  <data name="SettingsAudioCategory" xml:space="preserve"><value>音频</value></data>
+  <data name="SettingsStreamingCategory" xml:space="preserve"><value>串流</value></data>
+  <data name="SettingsReceiversCategory" xml:space="preserve"><value>接收端管理</value></data>
+  <data name="TraySwitch" xml:space="preserve"><value>切换设备</value></data>
+  <data name="PairingDialogTitle"><value>输入配对码或密码</value></data>
+  <data name="PairingDialogHint"><value>输入接收设备显示的配对码；如果设备设置了 AirPlay 密码，请输入该密码。</value></data>
+  <data name="PairingDialogFailed"><value>配对未完成。请核对配对码及接收设备的 AirPlay 权限后重试。</value></data>
+  <data name="AddReceiverDialogFailed"><value>未能添加设备。请检查地址、端口及网络连接后重试。</value></data>
+  <data name="ReceiverHostRequired"><value>请输入设备的 IP 地址或主机名。</value></data>
+  <data name="HistoryMetric" xml:space="preserve"><value>图表内容</value></data>
+  <data name="ChartSentBytes" xml:space="preserve"><value>发送数据量</value></data>
+  <data name="ChartSentPackets" xml:space="preserve"><value>发送包数量</value></data>
+  <data name="ChartIntervalSecond" xml:space="preserve"><value>每秒统计</value></data>
+  <data name="ChartIntervalTenSeconds" xml:space="preserve"><value>每 10 秒统计</value></data>
+  <data name="ChartIntervalMinute" xml:space="preserve"><value>每分钟统计</value></data>
+  <data name="RefreshReceivers"><value>刷新</value></data>
+  <data name="SettingsAboutCategory"><value>关于</value></data>
+  <data name="AboutVersion"><value>0.1.1.0</value></data>
+  <data name="AboutDisclaimerTitle"><value>声明</value></data>
+  <data name="AboutMicrosoft"><value>Win2Air 与 Microsoft Corporation 无关联，未获其赞助或认可。Microsoft 和 Windows 是 Microsoft 集团公司的商标。</value></data>
+  <data name="AboutOpenSource"><value>开源说明</value></data>
+  <data name="AboutOpenSourceTerms"><value>所列许可证适用于对应项目的开源代码。Windows App SDK 和 WinUI 的分发组件另受随附 Microsoft 许可条款约束。</value></data>
+  <data name="AboutProjectLink"><value>项目</value></data>
+  <data name="AboutProjectAddress"><value>仓库 / 官网</value></data>
+  <data name="AboutLicenseLink"><value>许可证</value></data>
+  <data name="AboutDisclaimer"><value>本软件按现状提供，不保证适用于所有设备或使用场景。请遵守适用法律及内容授权条款。</value></data>
+  <data name="AboutApple"><value>Win2Air 与 Apple Inc. 无关联，未获其赞助或认可。AirPlay、HomePod 和 Apple 是 Apple Inc. 的商标。</value></data>
+  <data name="ReceiverMediaControl"><value>允许接收端控制播放</value></data>
+  <data name="SettingsLogLevel"><value>日志级别</value></data>
+  <data name="StandbyDisconnect"><value>待机后断开</value></data>
+  <data name="StandbyOneMinute"><value>1 分钟</value></data>
+  <data name="StandbyFiveMinutes"><value>5 分钟</value></data>
+  <data name="StandbyFifteenMinutes"><value>15 分钟</value></data>
+  <data name="StandbyThirtyMinutes"><value>30 分钟</value></data>
+  <data name="StatusWaitingForAudio"><value>等待声音</value></data>
+  <data name="EventConnected"><value>已连接</value></data>
+  <data name="EventControlPause"><value>收到暂停指令</value></data>
+  <data name="EventControlPlay"><value>收到播放指令</value></data>
+  <data name="EventControlNext"><value>收到下一首指令</value></data>
+  <data name="EventControlPrevious"><value>收到上一首指令</value></data>
+  <data name="EventContent"><value>正在播放</value></data>
+  <data name="EventStandbyEnter"><value>进入待机</value></data>
+  <data name="EventStandbyLeave"><value>离开待机</value></data>
+  <data name="EventStandbyDisconnect"><value>待机后自动断开</value></data>
+</root>

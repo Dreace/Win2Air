@@ -1,0 +1,102 @@
+diff --git a/tests/t-poll.c b/tests/t-poll.c
+--- a/tests/t-poll.c
++++ b/tests/t-poll.c
+@@ -176,32 +176,51 @@
+-static void
+-create_pipe (estream_t *r_in, estream_t *r_out)
+-{
+-  gpg_error_t err;
+-  int filedes[2];
+-
+-#ifdef _WIN32
+-  if (_pipe (filedes, 512, 0) == -1)
+-#else
+-  if (pipe (filedes) == -1)
+-#endif
+-    {
+-      err = gpg_error_from_syserror ();
+-      die ("error creating a pipe: %s\n", gpg_strerror (err));
+-    }
+-
+-  show ("created pipe [%d, %d]\n", filedes[0], filedes[1]);
+-
+-  *r_in = es_fdopen (filedes[0], "r,pollable");
+-  if (!*r_in)
+-    {
+-      err = gpg_error_from_syserror ();
+-      die ("error creating a stream for a pipe: %s\n", gpg_strerror (err));
+-    }
+-
+-  *r_out = es_fdopen (filedes[1], "w,pollable");
+-  if (!*r_out)
+-    {
+-      err = gpg_error_from_syserror ();
+-      die ("error creating a stream for a pipe: %s\n", gpg_strerror (err));
+-    }
+-}
++static void
++create_pipe (estream_t *r_in, estream_t *r_out)
++{
++  gpg_error_t err;
++ #ifdef _WIN32
++  HANDLE input, output;
++  es_syshd_t read_handle, write_handle;
++ #else
++  int filedes[2];
++ #endif
++
++#ifdef _WIN32
++  if (!CreatePipe (&input, &output, NULL, 512))
++#else
++  if (pipe (filedes) == -1)
++#endif
++    {
++      err = gpg_error_from_syserror ();
++      die ("error creating a pipe: %s\n", gpg_strerror (err));
++    }
++
++#ifdef _WIN32
++  read_handle.type = write_handle.type = ES_SYSHD_HANDLE;
++  read_handle.u.handle = input;
++  write_handle.u.handle = output;
++#else
++  show ("created pipe [%d, %d]\n", filedes[0], filedes[1]);
++#endif
++
++#ifdef _WIN32
++  *r_in = es_sysopen (&read_handle, "r,pollable");
++#else
++  *r_in = es_fdopen (filedes[0], "r,pollable");
++#endif
++  if (!*r_in)
++    {
++      err = gpg_error_from_syserror ();
++      die ("error creating a stream for a pipe: %s\n", gpg_strerror (err));
++    }
++
++#ifdef _WIN32
++  *r_out = es_sysopen (&write_handle, "w,pollable");
++#else
++  *r_out = es_fdopen (filedes[1], "w,pollable");
++#endif
++  if (!*r_out)
++    {
++      err = gpg_error_from_syserror ();
++      die ("error creating a stream for a pipe: %s\n", gpg_strerror (err));
++    }
++}
+diff --git a/tests/t-stringutils.c b/tests/t-stringutils.c
+--- a/tests/t-stringutils.c
++++ b/tests/t-stringutils.c
+@@ -82,3 +82,8 @@
+-    }
+-  return home_buffer;
+-}
++    }
++#ifdef HAVE_W32_SYSTEM
++  if (home_buffer)
++    for (char *p = home_buffer; *p; ++p)
++      if (*p == '\\') *p = '/';
++#endif
++  return home_buffer;
++}

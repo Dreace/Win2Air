@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+	</resheader>
+	<data name="CommandPending" xml:space="preserve"><value>Working</value></data>
+	<data name="CredentialSaveFailed" xml:space="preserve"><value>Connected, but this device's pairing was not saved</value></data>
+	<data name="SettingsLoadFailed" xml:space="preserve"><value>Couldn't read settings. The original file is still there</value></data>
+	<data name="AudioSource"><value>Sound source</value></data>
+	<data name="SourceUnavailable"><value>That output isn't available.</value></data>
+	<data name="Destination"><value>Device</value></data>
+	<data name="FollowDefault"><value>System default</value></data>
+	<data name="NoReceivers"><value>No devices</value></data>
+	<data name="Host"><value>Address</value></data>
+	<data name="Port"><value>Port</value></data>
+	<data name="AddReceiver"><value>Add</value></data>
+	<data name="AddDevice"><value>Add device</value></data>
+	<data name="PairingCode"><value>Pairing code or password</value></data>
+	<data name="Connect"><value>Connect</value></data>
+	<data name="Disconnect"><value>Disconnect</value></data>
+	<data name="LocalPlayback"><value>Also play on this computer</value></data>
+	<data name="StateDisconnected"><value>Not connected</value></data>
+	<data name="StateConnecting"><value>Connecting</value></data>
+	<data name="StatePairing"><value>Pairing</value></data>
+	<data name="StateSettingUp"><value>Getting ready</value></data>
+	<data name="StateReady"><value>Connected</value></data>
+	<data name="StateStreaming"><value>Playing</value></data>
+	<data name="StatusPlaying"><value>Connected | Playing</value></data>
+	<data name="StatusPaused"><value>Connected | Paused</value></data>
+	<data name="StatusStandby"><value>Connected | Standby</value></data>
+	<data name="StateEnding"><value>Disconnecting</value></data>
+	<data name="StateError"><value>Playback failed</value></data>
+	<data name="ShowHidden"><value>Show hidden devices</value></data>
+	<data name="ReceiverVolume"><value>Volume</value></data>
+	<data name="ReceiverMuted"><value>Mute</value></data>
+	<data name="ReceiverDetails"><value>Device settings</value></data>
+	<data name="ReceiverFavorite"><value>Favorite</value></data>
+	<data name="ReceiverHidden"><value>Hide from the list</value></data>
+	<data name="ReceiverAutoConnect"><value>Connect automatically next time</value></data>
+	<data name="ReceiverEditName"><value>Name</value></data>
+	<data name="ReceiverHost"><value>Address</value></data>
+	<data name="ReceiverPort"><value>Port</value></data>
+	<data name="ReceiverSave"><value>Save</value></data>
+	<data name="ReceiverEndpointSave"><value>Save address</value></data>
+	<data name="ReceiverDelete"><value>Delete device</value></data>
+	<data name="VolumePending"><value>Confirming volume</value></data>
+	<data name="ReceiverActive"><value>Current device</value></data>
+	<data name="ReceiverInactive"><value>Saved</value></data>
+	<data name="HealthUnknown"><value>Unknown</value></data>
+	<data name="InvalidPort"><value>Enter a whole number from 1 to 65535.</value></data>
+	<data name="PlaybackNavigation"><value>Play</value></data>
+	<data name="DevicesNavigation"><value>Devices</value></data>
+	<data name="StatisticsNavigation"><value>Statistics</value></data>
+	<data name="SettingsNavigation"><value>Settings</value></data>
+	<data name="StartupEnabled"><value>Open at sign-in</value></data>
+	<data name="StartupMinimized"><value>Don't show the window at sign-in</value></data>
+	<data name="RestorePrevious"><value>Connect to the last device at startup</value></data>
+	<data name="CloseToTray"><value>Keep playing after the window closes</value></data>
+	<data name="ManageReceivers"><value>Manage devices</value></data>
+	<data name="TrayOpen"><value>Open</value></data>
+	<data name="TrayExit"><value>Exit</value></data>
+	<data name="NoActiveReceiver"><value>Nothing is playing</value></data>
+	<data name="StartupDisabledByUser"><value>Startup is turned off in Task Manager. Turn it back on there first.</value></data>
+	<data name="StartupDisabledByPolicy"><value>System policy doesn't allow opening at sign-in.</value></data>
+	<data name="StartupEnabledByPolicy"><value>System policy requires opening at sign-in.</value></data>
+	<data name="StreamingTitle"><value>Delay</value></data>
+	<data name="LatencyMode"><value>Delay</value></data>
+	<data name="LatencyLow"><value>Low (120 ms)</value></data>
+	<data name="LatencyUltra"><value>Ultra-low (80 ms)</value></data>
+	<data name="LatencyAdaptive"><value>Adaptive ({0} ms)</value></data>
+  <data name="LatencyAdaptivePending"><value>Adaptive</value></data>
+	<data name="LatencyBalanced"><value>Balanced (1000 ms)</value></data>
+	<data name="LatencyStable"><value>Stable (2000 ms)</value></data>
+	<data name="LatencyCustom"><value>Custom (20–5000 ms)</value></data>
+	<data name="CustomLatency"><value>Custom delay (ms)</value></data>
+	<data name="ApplyCustomLatency"><value>Save</value></data>
+	<data name="SilenceTimeout"><value>Pause after silence</value></data>
+	<data name="SilenceTen"><value>10 seconds</value></data>
+	<data name="SilenceThirty"><value>30 seconds</value></data>
+	<data name="SilenceSixty"><value>60 seconds</value></data>
+	<data name="SilenceNever"><value>Don't pause</value></data>
+	<data name="PresentationSaved"><value>Delay</value></data>
+	<data name="PresentationDefault"><value>Default delay</value></data>
+	<data name="AutoReconnect"><value>Reconnect after a drop</value></data>
+	<data name="StateRecovering"><value>Reconnecting</value></data>
+	<data name="AuthenticationRequired"><value>The receiver requires a pairing code or AirPlay password. Automatic reconnect has stopped.</value></data>
+	<data name="RetryDue"><value>Next try</value></data>
+	<data name="HealthPoor"><value>Poor</value></data>
+	<data name="HealthUnstable"><value>Unstable</value></data>
+	<data name="HealthGood"><value>Good</value></data>
+	<data name="HealthExcellent"><value>Excellent</value></data>
+	<data name="HistoryWindow"><value>Time</value></data>
+	<data name="HistoryMinute"><value>1 minute</value></data>
+	<data name="HistoryTenMinutes"><value>10 minutes</value></data>
+	<data name="HistoryHour"><value>1 hour</value></data>
+	<data name="HistoryUnavailable"><value>No records</value></data>
+	<data name="ExportDiagnostics"><value>Export diagnostics</value></data>
+	<data name="CancelDiagnostics"><value>Cancel</value></data>
+	<data name="DiagnosticPending"><value>Exporting</value></data>
+	<data name="DiagnosticSaved"><value>Saved</value></data>
+	<data name="DiagnosticCanceled"><value>Canceled</value></data>
+	<data name="DiagnosticFailed"><value>Export failed</value></data>
+	<data name="MetricUnavailable"><value>—</value></data>
+	<data name="MetricBitrate"><value>Sending rate (kbit/s)</value></data>
+	<data name="MetricSentPackets"><value>Packets sent</value></data>
+	<data name="MetricSentBytes"><value>Data sent</value></data>
+	<data name="MetricResendRequests"><value>Asked to resend</value></data>
+	<data name="MetricResendSuccess"><value>Resent</value></data>
+	<data name="MetricResendExpired"><value>Too late to resend</value></data>
+	<data name="MetricPending"><value>Audio still being prepared</value></data>
+	<data name="MetricQueue"><value>Send buffer (%)</value></data>
+	<data name="MetricDiscontinuities"><value>Recording broke</value></data>
+	<data name="MetricTargetLatency"><value>Delay (ms)</value></data>
+	<data name="MetricRecoveries"><value>Reconnects</value></data>
+	<data name="MetricCaptured"><value>Audio recorded</value></data>
+	<data name="MetricSubmitted"><value>Audio sent</value></data>
+	<data name="MetricNonzero"><value>Portion with sound</value></data>
+	<data name="MetricSessionSummary" xml:space="preserve"><value>This session</value></data>
+	<data name="MetricAppTotals" xml:space="preserve"><value>Total</value></data>
+	<data name="GeneralSettings"><value>Appearance</value></data>
+	<data name="AudioSettings"><value>Sound</value></data>
+	<data name="DeviceSettings"><value>Devices</value></data>
+	<data name="SettingsTheme"><value>Theme</value></data>
+	<data name="SettingsLanguage"><value>Language</value></data>
+	<data name="SettingsSource"><value>Sound source</value></data>
+	<data name="FollowSystem"><value>Match the system</value></data>
+	<data name="ThemeLight"><value>Light</value></data>
+	<data name="ThemeDark"><value>Dark</value></data>
+	<data name="LanguageChinese"><value>简体中文</value></data>
+	<data name="LanguageEnglish"><value>English</value></data>
+	<data name="PreferenceSaved"><value>Saved</value></data>
+	<data name="ReceiverForget"><value>Clear pairing</value></data>
+	<data name="ReceiverResetLatency"><value>Reset adaptive latency</value></data>
+	<data name="CurrentReceiverCaption"><value>Now playing</value></data>
+	<data name="ChartNow"><value>Now</value></data>
+	<data name="ManualReceiverOptions"><value>Add by address</value></data>
+	<data name="PairingOptions"><value>Pair</value></data>
+	<data name="DialogClose"><value>Close</value></data>
+	<data name="LatencyOptions"><value>Delay</value></data>
+	<data name="AudioOptions"><value>Sound</value></data>
+	<data name="LifecycleOptions"><value>Startup</value></data>
+	<data name="MetricDetails"><value>Other data</value></data>
+	<data name="UnitFrames"><value>frames</value></data>
+	<data name="UnitPackets"><value>packets</value></data>
+	<data name="UnitTimes"><value>times</value></data>
+	<data name="UnitChannels"><value>ch</value></data>
+	<data name="UnitBits"><value>bit</value></data>
+	<data name="SwitchOn"><value>On</value></data>
+	<data name="SwitchOff"><value>Off</value></data>
+	<data name="PairConnect"><value>Connect with code</value></data>
+	<data name="SelectPairingTarget"><value>Choose a device first</value></data>
+	<data name="CancelAction"><value>Cancel</value></data>
+	<data name="DeleteConsequences"><value>Playback stops, and this device and its pairing are removed. You'll need to add it again.</value></data>
+	<data name="ForgetConsequences"><value>Playback stops and the pairing is cleared. The device stays in the list.</value></data>
+	<data name="AppliedBudget"><value>Current delay</value></data>
+	<data name="LatencyFieldInvalid"><value>Enter a whole number from 20 to 5000.</value></data>
+  <data name="AvailableReceiversHeading" xml:space="preserve"><value>Available devices</value></data>
+  <data name="SwitchReceiverHeading" xml:space="preserve"><value>Switch device</value></data>
+  <data name="AudioSettingsAction" xml:space="preserve"><value>Audio settings</value></data>
+  <data name="MuteAction" xml:space="preserve"><value>Mute</value></data>
+  <data name="UnmuteAction" xml:space="preserve"><value>Unmute</value></data>
+  <data name="DurationLabel" xml:space="preserve"><value>Connected for</value></data>
+  <data name="LeadLabel" xml:space="preserve"><value>Estimated delay</value></data>
+  <data name="BitrateLabel" xml:space="preserve"><value>Send bitrate</value></data>
+  <data name="HealthLabel" xml:space="preserve"><value>Network health</value></data>
+  <data name="NetworkHeading" xml:space="preserve"><value>Network transfer</value></data>
+  <data name="BufferHeading" xml:space="preserve"><value>Audio buffer</value></data>
+  <data name="ResendHeading" xml:space="preserve"><value>Retransmission request rate</value></data>
+  <data name="ConnectionEvents" xml:space="preserve"><value>Connection events</value></data>
+  <data name="ConnectionFound" xml:space="preserve"><value>Device found</value></data>
+  <data name="EventPlay" xml:space="preserve"><value>Play</value></data>
+  <data name="EventPause" xml:space="preserve"><value>Pause</value></data>
+  <data name="EventStandby" xml:space="preserve"><value>Standby</value></data>
+  <data name="EventLatency" xml:space="preserve"><value>Latency</value></data>
+  <data name="EventProblemQueue" xml:space="preserve"><value>Send queue above the budget.</value></data>
+  <data name="EventProblemResend" xml:space="preserve"><value>Resends increased.</value></data>
+  <data name="EventProblemDiscontinuity" xml:space="preserve"><value>Audio discontinuity.</value></data>
+  <data name="EventProblemInterrupted" xml:space="preserve"><value>Capture interrupted.</value></data>
+  <data name="EventProblemClock" xml:space="preserve"><value>Clock unstable.</value></data>
+  <data name="EventProblemRetarget" xml:space="preserve"><value>Latency adjustment failed.</value></data>
+  <data name="NetworkBytesLabel" xml:space="preserve"><value>Data sent</value></data>
+  <data name="NetworkPacketsLabel" xml:space="preserve"><value>Packets sent</value></data>
+  <data name="NetworkRequestsLabel" xml:space="preserve"><value>Retransmission rate</value></data>
+  <data name="NetworkPendingLabel" xml:space="preserve"><value>Packets waiting</value></data>
+  <data name="BufferQueueLabel" xml:space="preserve"><value>Buffer occupancy</value></data>
+  <data name="BufferPendingLabel" xml:space="preserve"><value>Pending audio packets</value></data>
+  <data name="SettingsGeneralCategory" xml:space="preserve"><value>General</value></data>
+  <data name="SettingsAudioCategory" xml:space="preserve"><value>Audio</value></data>
+  <data name="SettingsStreamingCategory" xml:space="preserve"><value>Streaming</value></data>
+  <data name="SettingsReceiversCategory" xml:space="preserve"><value>Receivers</value></data>
+  <data name="TraySwitch" xml:space="preserve"><value>Switch device</value></data>
+  <data name="PairingDialogTitle"><value>Enter pairing code or password</value></data>
+  <data name="PairingDialogHint"><value>Enter the code shown on the receiver, or its AirPlay password if one is set.</value></data>
+  <data name="PairingDialogFailed"><value>Pairing did not complete. Check the code and the receiver's AirPlay permissions, then try again.</value></data>
+  <data name="AddReceiverDialogFailed"><value>Could not add the receiver. Check the address, port and network connection, then try again.</value></data>
+  <data name="ReceiverHostRequired"><value>Enter the receiver's IP address or hostname.</value></data>
+  <data name="HistoryMetric" xml:space="preserve"><value>Chart content</value></data>
+  <data name="ChartSentBytes" xml:space="preserve"><value>Sent data</value></data>
+  <data name="ChartSentPackets" xml:space="preserve"><value>Sent packets</value></data>
+  <data name="ChartIntervalSecond" xml:space="preserve"><value>Per second</value></data>
+  <data name="ChartIntervalTenSeconds" xml:space="preserve"><value>Per 10 seconds</value></data>
+  <data name="ChartIntervalMinute" xml:space="preserve"><value>Per minute</value></data>
+  <data name="RefreshReceivers"><value>Refresh</value></data>
+  <data name="SettingsAboutCategory"><value>About</value></data>
+  <data name="AboutVersion"><value>0.1.1.0</value></data>
+  <data name="AboutDisclaimerTitle"><value>Disclaimer</value></data>
+  <data name="AboutMicrosoft"><value>Win2Air is not affiliated with, sponsored, or endorsed by Microsoft Corporation. Microsoft and Windows are trademarks of the Microsoft group of companies.</value></data>
+  <data name="AboutOpenSource"><value>Open source notices</value></data>
+  <data name="AboutOpenSourceTerms"><value>The listed licenses apply to the corresponding projects' open source code. Distributed Windows App SDK and WinUI components are also governed by the accompanying Microsoft license terms.</value></data>
+  <data name="AboutProjectLink"><value>Project</value></data>
+  <data name="AboutProjectAddress"><value>Repository / website</value></data>
+  <data name="AboutLicenseLink"><value>License</value></data>
+  <data name="AboutDisclaimer"><value>This software is provided as is, without a guarantee of suitability for every device or use. Follow applicable laws and content licensing terms.</value></data>
+  <data name="AboutApple"><value>Win2Air is not affiliated with, sponsored, or endorsed by Apple Inc. AirPlay, HomePod, and Apple are trademarks of Apple Inc.</value></data>
+  <data name="ReceiverMediaControl"><value>Allow receiver playback controls</value></data>
+  <data name="SettingsLogLevel"><value>Log level</value></data>
+  <data name="StandbyDisconnect"><value>Disconnect after standby</value></data>
+  <data name="StandbyOneMinute"><value>1 minute</value></data>
+  <data name="StandbyFiveMinutes"><value>5 minutes</value></data>
+  <data name="StandbyFifteenMinutes"><value>15 minutes</value></data>
+  <data name="StandbyThirtyMinutes"><value>30 minutes</value></data>
+  <data name="StatusWaitingForAudio"><value>Waiting for audio</value></data>
+  <data name="EventConnected"><value>Connected</value></data>
+  <data name="EventControlPause"><value>Pause command received</value></data>
+  <data name="EventControlPlay"><value>Play command received</value></data>
+  <data name="EventControlNext"><value>Next track command received</value></data>
+  <data name="EventControlPrevious"><value>Previous track command received</value></data>
+  <data name="EventContent"><value>Now playing</value></data>
+  <data name="EventStandbyEnter"><value>Entered standby</value></data>
+  <data name="EventStandbyLeave"><value>Left standby</value></data>
+  <data name="EventStandbyDisconnect"><value>Disconnected after standby</value></data>
+</root>

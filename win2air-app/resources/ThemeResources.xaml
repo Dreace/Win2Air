@@ -1,0 +1,118 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <SolidColorBrush x:Key="AirBackgroundBrush" Color="{ThemeResource SolidBackgroundFillColorBase}" />
+      <SolidColorBrush x:Key="AirNavigationBrush" Color="{ThemeResource SolidBackgroundFillColorBase}" />
+      <SolidColorBrush x:Key="AirSurfaceBrush" Color="{ThemeResource CardBackgroundFillColorDefault}" />
+      <SolidColorBrush x:Key="AirSubtleBrush" Color="{ThemeResource SubtleFillColorSecondary}" />
+      <SolidColorBrush x:Key="AirTextBrush" Color="{ThemeResource TextFillColorPrimary}" />
+      <SolidColorBrush x:Key="AirSecondaryBrush" Color="{ThemeResource TextFillColorSecondary}" />
+      <SolidColorBrush x:Key="AirBorderBrush" Color="{ThemeResource CardStrokeColorDefault}" />
+      <SolidColorBrush x:Key="AirAccentBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+      <SolidColorBrush x:Key="AirAccentSubtleBrush" Color="{ThemeResource SubtleFillColorSecondary}" />
+      <SolidColorBrush x:Key="AirSuccessBrush" Color="#137333" />
+      <SolidColorBrush x:Key="AirErrorBrush" Color="#B42318" />
+      <SolidColorBrush x:Key="AirGridBrush" Color="#D9D9D9" />
+      <SolidColorBrush x:Key="AirChartBrush" Color="#545454" />
+      <SolidColorBrush x:Key="AirWarningBrush" Color="#946200" />
+    </ResourceDictionary>
+    <ResourceDictionary x:Key="Dark">
+      <SolidColorBrush x:Key="AirBackgroundBrush" Color="{ThemeResource SolidBackgroundFillColorBase}" />
+      <SolidColorBrush x:Key="AirNavigationBrush" Color="{ThemeResource SolidBackgroundFillColorBase}" />
+      <SolidColorBrush x:Key="AirSurfaceBrush" Color="{ThemeResource CardBackgroundFillColorDefault}" />
+      <SolidColorBrush x:Key="AirSubtleBrush" Color="{ThemeResource SubtleFillColorSecondary}" />
+      <SolidColorBrush x:Key="AirTextBrush" Color="{ThemeResource TextFillColorPrimary}" />
+      <SolidColorBrush x:Key="AirSecondaryBrush" Color="{ThemeResource TextFillColorSecondary}" />
+      <SolidColorBrush x:Key="AirBorderBrush" Color="{ThemeResource CardStrokeColorDefault}" />
+      <SolidColorBrush x:Key="AirAccentBrush" Color="{ThemeResource SystemAccentColorLight3}" />
+      <SolidColorBrush x:Key="AirAccentSubtleBrush" Color="{ThemeResource SubtleFillColorSecondary}" />
+      <SolidColorBrush x:Key="AirSuccessBrush" Color="#75D59A" />
+      <SolidColorBrush x:Key="AirErrorBrush" Color="#FF9896" />
+      <SolidColorBrush x:Key="AirGridBrush" Color="#454545" />
+      <SolidColorBrush x:Key="AirChartBrush" Color="#E0E0E0" />
+      <SolidColorBrush x:Key="AirWarningBrush" Color="#F0BC6B" />
+    </ResourceDictionary>
+    <ResourceDictionary x:Key="HighContrast">
+      <SolidColorBrush x:Key="AirBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
+      <SolidColorBrush x:Key="AirNavigationBrush" Color="{ThemeResource SystemColorWindowColor}" />
+      <SolidColorBrush x:Key="AirSurfaceBrush" Color="{ThemeResource SystemColorWindowColor}" />
+      <SolidColorBrush x:Key="AirSubtleBrush" Color="{ThemeResource SystemColorWindowColor}" />
+      <SolidColorBrush x:Key="AirTextBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirSecondaryBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirBorderBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirAccentBrush" Color="{ThemeResource SystemColorHotlightColor}" />
+      <SolidColorBrush x:Key="AirAccentSubtleBrush" Color="{ThemeResource SystemColorWindowColor}" />
+      <SolidColorBrush x:Key="AirSuccessBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirErrorBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirGridBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirChartBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+      <SolidColorBrush x:Key="AirWarningBrush" Color="{ThemeResource SystemColorWindowTextColor}" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+  <Style x:Key="AirSectionStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="19" /><Setter Property="FontWeight" Value="SemiBold" /><Setter Property="TextWrapping" Value="Wrap" /><Setter Property="Foreground" Value="{ThemeResource AirTextBrush}" />
+  </Style>
+  <Style x:Key="AirCardHeadingStyle" TargetType="TextBlock"><Setter Property="FontSize" Value="16" /><Setter Property="FontWeight" Value="SemiBold" /><Setter Property="Foreground" Value="{ThemeResource AirTextBrush}" /><Setter Property="TextWrapping" Value="Wrap" /></Style>
+  <Style x:Key="SettingsSectionHeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource AirSectionStyle}" />
+  <Style x:Key="AirCardStyle" TargetType="Border">
+    <Setter Property="Background" Value="{ThemeResource AirSurfaceBrush}" /><Setter Property="BorderBrush" Value="{ThemeResource AirBorderBrush}" /><Setter Property="BorderThickness" Value="1" /><Setter Property="CornerRadius" Value="16" /><Setter Property="Padding" Value="20" />
+  </Style>
+  <Style x:Key="AirSecondaryTextStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="{ThemeResource AirSecondaryBrush}" /><Setter Property="TextWrapping" Value="Wrap" /><Setter Property="FontSize" Value="13" />
+  </Style>
+  <x:Double x:Key="AirControlMinHeight">32</x:Double>
+  <!-- Native inner editors and ContentDialog buttons use these WinUI keys. -->
+  <x:Double x:Key="TextControlThemeMinHeight">32</x:Double>
+  <x:Double x:Key="ContentDialogButtonMinHeight">32</x:Double>
+  <Style x:Key="AirAccentButtonStyle" TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+    <Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" />
+    <Setter Property="Padding" Value="12,4" />
+    <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style x:Key="AirButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+    <Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" />
+    <Setter Property="Padding" Value="12,4" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}" />
+  </Style>
+  <Style TargetType="Button" BasedOn="{StaticResource AirButtonStyle}" />
+  <Style x:Key="AirTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource DefaultTextBoxStyle}">
+    <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}" />
+    <Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style TargetType="TextBox" BasedOn="{StaticResource AirTextBoxStyle}" />
+  <Style x:Key="AirNumberBoxStyle" TargetType="NumberBox">
+    <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}" />
+    <Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style TargetType="NumberBox" BasedOn="{StaticResource AirNumberBoxStyle}" />
+  <Style TargetType="PasswordBox" BasedOn="{StaticResource DefaultPasswordBoxStyle}">
+    <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}" />
+    <Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style x:Key="AirComboStyle" TargetType="ComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}">
+    <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}" />
+    <Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style TargetType="ComboBox" BasedOn="{StaticResource AirComboStyle}" />
+  <Style x:Key="AirSettingRowStyle" TargetType="Grid"><Setter Property="MinHeight" Value="{StaticResource AirControlMinHeight}" /><Setter Property="ColumnSpacing" Value="16" /></Style>
+  <Style x:Key="AirSettingComboStyle" TargetType="ComboBox" BasedOn="{StaticResource AirComboStyle}">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+  </Style>
+  <Style x:Key="AirSettingLabelStyle" TargetType="TextBlock"><Setter Property="VerticalAlignment" Value="Center" /><Setter Property="TextWrapping" Value="Wrap" /><Setter Property="FontSize" Value="14" /><Setter Property="Foreground" Value="{ThemeResource AirTextBrush}" /></Style>
+  <Style x:Key="AirMetricStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="28" /><Setter Property="FontWeight" Value="SemiBold" /><Setter Property="Foreground" Value="{ThemeResource AirTextBrush}" /><Setter Property="Typography.NumeralAlignment" Value="Tabular" /><Setter Property="TextTrimming" Value="CharacterEllipsis" />
+  </Style>
+  <Style x:Key="AirActionStyle" TargetType="Button" BasedOn="{StaticResource AirButtonStyle}" />
+</ResourceDictionary>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64"><Configuration>Debug</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2D57FC45-664B-4B9F-9711-3C4A8833C2B4}</ProjectGuid><RootNamespace>Win2Air</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion><WindowsTargetPlatformMinVersion>10.0.19045.0</WindowsTargetPlatformMinVersion>
+    <UseWinUI>true</UseWinUI><WindowsPackageType>None</WindowsPackageType><WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <AppContainerApplication>false</AppContainerApplication>
+    <AppPackages>$(MSBuildThisFileDirectory)..\out\packages\</AppPackages>
+    <CppWinRTOptimized>true</CppWinRTOptimized><CppWinRTGenerateWindowsMetadata>false</CppWinRTGenerateWindowsMetadata>
+    <EnableMsixTooling>false</EnableMsixTooling>
+    <DisableWindowsAppSDKMLAutoInitialize>true</DisableWindowsAppSDKMLAutoInitialize>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration"><ConfigurationType>Application</ConfigurationType><PlatformToolset>v145</PlatformToolset><VCToolsVersion>14.51.36231</VCToolsVersion><CharacterSet>Unicode</CharacterSet><UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(AppPackages)Microsoft.Windows.SDK.BuildTools.10.0.26100.4654\build\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('$(AppPackages)Microsoft.Windows.SDK.BuildTools.10.0.26100.4654\build\Microsoft.Windows.SDK.BuildTools.props')" />
+  <Import Project="$(AppPackages)Microsoft.Windows.CppWinRT.3.0.260818.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('$(AppPackages)Microsoft.Windows.CppWinRT.3.0.260818.1\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <Import Project="$(AppPackages)Microsoft.Windows.AI.MachineLearning.2.1.74\build\native\Microsoft.Windows.AI.MachineLearning.props" Condition="Exists('$(AppPackages)Microsoft.Windows.AI.MachineLearning.2.1.74\build\native\Microsoft.Windows.AI.MachineLearning.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.2.5.1\build\native\Microsoft.WindowsAppSDK.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.2.5.1\build\native\Microsoft.WindowsAppSDK.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.AI.2.5.5\build\native\Microsoft.WindowsAppSDK.AI.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.AI.2.5.5\build\native\Microsoft.WindowsAppSDK.AI.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Foundation.2.3.12\build\native\Microsoft.WindowsAppSDK.Foundation.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Foundation.2.3.12\build\native\Microsoft.WindowsAppSDK.Foundation.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.InteractiveExperiences.2.1.9\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.InteractiveExperiences.2.1.9\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.ML.2.1.94\build\native\Microsoft.WindowsAppSDK.ML.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.ML.2.1.94\build\native\Microsoft.WindowsAppSDK.ML.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Runtime.2.5.1\build\native\Microsoft.WindowsAppSDK.Runtime.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Runtime.2.5.1\build\native\Microsoft.WindowsAppSDK.Runtime.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Search.2.5.5\build\native\Microsoft.WindowsAppSDK.Search.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Search.2.5.5\build\native\Microsoft.WindowsAppSDK.Search.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Widgets.2.0.5\build\native\Microsoft.WindowsAppSDK.Widgets.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Widgets.2.0.5\build\native\Microsoft.WindowsAppSDK.Widgets.props')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.WinUI.2.3.9\build\native\Microsoft.WindowsAppSDK.WinUI.props" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.WinUI.2.3.9\build\native\Microsoft.WindowsAppSDK.WinUI.props')" />
+  <PropertyGroup><OutDir>$(MSBuildThisFileDirectory)..\out\bin\$(Configuration)\</OutDir><IntDir>$(MSBuildThisFileDirectory)..\out\obj\Win2Air\$(Configuration)\</IntDir><TargetName>Win2Air</TargetName></PropertyGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerDebuggerType>NativeOnly</LocalDebuggerDebuggerType>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile><Optimization>Disabled</Optimization><DebugInformationFormat>ProgramDatabase</DebugInformationFormat></ClCompile>
+    <Link><GenerateDebugInformation>true</GenerateDebugInformation></Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile><DebugInformationFormat>OldStyle</DebugInformationFormat></ClCompile>
+    <Link><GenerateDebugInformation>true</GenerateDebugInformation></Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile><RuntimeLibrary Condition="'$(Configuration)'=='Debug'">MultiThreadedDebug</RuntimeLibrary><RuntimeLibrary Condition="'$(Configuration)'=='Release'">MultiThreaded</RuntimeLibrary></ClCompile>
+    <ClCompile><LanguageStandard>stdcpp20</LanguageStandard><WarningLevel>Level4</WarningLevel><SDLCheck>true</SDLCheck><ConformanceMode>true</ConformanceMode><AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions><MultiProcessorCompilation>true</MultiProcessorCompilation><ProcessorNumber>4</ProcessorNumber><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile><PrecompiledHeaderOutputFile>$(IntDir)Win2Air.pch</PrecompiledHeaderOutputFile><ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles><AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories><ExceptionHandling>Sync</ExceptionHandling></ClCompile>
+    <Link><SubSystem>Windows</SubSystem><AdditionalDependencies>windowsapp.lib;ole32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies></Link>
+  </ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="..\src\pch.cpp"><PrecompiledHeader>Create</PrecompiledHeader></ClCompile><ClCompile Include="..\src\App\AppHost.cpp" /><ClCompile Include="..\src\App\AppHostFlyout.cpp" /><ClCompile Include="..\src\App\AppHostLaunch.cpp" /><ClCompile Include="..\src\App\AppHostReview.cpp" /><ClCompile Include="..\src\App\AppHostShell.cpp" /><ClCompile Include="..\src\App\AppHostStore.cpp" /><ClCompile Include="..\src\UI\ReceiverDialogs.cpp" /><None Include="packages.config" /><None Include="packages.lock.json" /></ItemGroup>
+  <ItemDefinitionGroup><ClCompile><PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile><Link><AdditionalDependencies>crypt32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies></Link></ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="..\src\Streaming\SenderLibrary.cpp" /><ClCompile Include="..\src\Streaming\CommandDispatcher.cpp" /><ClCompile Include="..\src\Settings\SettingsStore.cpp" /><ClCompile Include="..\src\Settings\CredentialStore.cpp" /><ClCompile Include="..\src\Diagnostics\Logger.cpp" /><PRIResource Include="..\resources\Strings\zh-CN\Resources.resw" /><PRIResource Include="..\resources\Strings\en-US\Resources.resw" /></ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup><ClCompile Include="..\src\Audio\DeviceManager.cpp" /><ClCompile Include="..\src\Audio\WasapiCapture.cpp" /><ClCompile Include="..\src\Audio\FormatConverter.cpp" /><ClCompile Include="..\src\Audio\AudioClock.cpp" /><ClCompile Include="..\src\Audio\RingBuffer.cpp" /><ClCompile Include="..\src\Audio\LocalPlaybackController.cpp" /><ClCompile Include="..\src\Discovery\DnsSdBrowser.cpp" /><ClCompile Include="..\src\Discovery\ReceiverResolver.cpp" /><ClCompile Include="..\src\Discovery\ReceiverRegistry.cpp" /><ClCompile Include="..\src\Discovery\ProductNames.cpp" /><ClCompile Include="..\src\Streaming\PresentationConfig.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinator.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorAudio.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorCallbacks.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorCommands.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorDiagnostics.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorLatency.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorPump.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorReceivers.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorRecovery.cpp" /><ClCompile Include="..\src\Streaming\StreamCoordinatorSession.cpp" /><ClCompile Include="..\src\UI\ViewModels\PlaybackViewModel.cpp" /><ClCompile Include="..\src\UI\PlaybackPage.cpp" /><ClCompile Include="..\src\UI\PlaybackPageRender.cpp" /><ClCompile Include="..\src\UI\DevicesPage.cpp" /></ItemGroup>
+  <ItemDefinitionGroup><Link><AdditionalDependencies>mfplat.lib;mfuuid.lib;wmcodecdspuuid.lib;avrt.lib;propsys.lib;dnsapi.lib;ws2_32.lib;bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies></Link></ItemDefinitionGroup>
+  <Target Name="CopyPlaybackPage" AfterTargets="Build"><Copy SourceFiles="$(MSBuildThisFileDirectory)..\src\UI\PlaybackPage.xaml;$(MSBuildThisFileDirectory)..\src\UI\SessionDeviceCard.xaml;$(MSBuildThisFileDirectory)..\src\UI\DevicesPage.xaml;$(MSBuildThisFileDirectory)..\src\UI\ReceiverCard.xaml" DestinationFolder="$(OutDir)" /></Target>
+  <ItemGroup><ClCompile Include="..\src\Streaming\VolumeController.cpp" /><ClCompile Include="..\src\UI\ViewModels\ReceiverViewModel.cpp" /></ItemGroup>
+  <ItemGroup><ClCompile Include="..\src\App\Activation.cpp" /><ClCompile Include="..\src\App\SingleInstance.cpp" /><ClCompile Include="..\src\App\StateRestore.cpp" /><ClCompile Include="..\src\Shell\TrayService.cpp" /><ClCompile Include="..\src\Shell\StartupService.cpp" /><ClCompile Include="..\src\UI\ViewModels\TrayViewModel.cpp" /><ClCompile Include="..\src\UI\ViewModels\NavigationViewModel.cpp" /></ItemGroup>
+  <ItemDefinitionGroup><ClCompile><PreprocessorDefinitions>WIN2AIR_DESKTOP;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile><Link><AdditionalDependencies>shell32.lib;comctl32.lib;dwmapi.lib;%(AdditionalDependencies)</AdditionalDependencies></Link></ItemDefinitionGroup>
+  <Target Name="CopyShellPages" AfterTargets="Build"><Copy SourceFiles="$(MSBuildThisFileDirectory)..\src\UI\MainWindow.xaml;$(MSBuildThisFileDirectory)..\src\UI\TrayFlyout.xaml;$(MSBuildThisFileDirectory)..\src\UI\SettingsPage.xaml" DestinationFolder="$(OutDir)" /></Target>
+  <ItemGroup><ClCompile Include="..\src\App\SystemAudioValidation.cpp" /></ItemGroup>
+  <ItemGroup><ClCompile Include="..\src\Streaming\ReceiverSession.cpp" /></ItemGroup>
+  <ItemDefinitionGroup><Link><AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies></Link></ItemDefinitionGroup>
+  <Import Project="$(AppPackages)Microsoft.Windows.SDK.BuildTools.10.0.26100.4654\build\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('$(AppPackages)Microsoft.Windows.SDK.BuildTools.10.0.26100.4654\build\Microsoft.Windows.SDK.BuildTools.targets')" />
+  <Import Project="$(AppPackages)Microsoft.Windows.CppWinRT.3.0.260818.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('$(AppPackages)Microsoft.Windows.CppWinRT.3.0.260818.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
+  <Import Project="$(AppPackages)Microsoft.Web.WebView2.1.0.3719.77\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('$(AppPackages)Microsoft.Web.WebView2.1.0.3719.77\build\native\Microsoft.Web.WebView2.targets')" />
+  <Import Project="$(AppPackages)Microsoft.Windows.AI.MachineLearning.2.1.74\build\native\Microsoft.Windows.AI.MachineLearning.targets" Condition="Exists('$(AppPackages)Microsoft.Windows.AI.MachineLearning.2.1.74\build\native\Microsoft.Windows.AI.MachineLearning.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.2.5.1\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.2.5.1\build\native\Microsoft.WindowsAppSDK.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.AI.2.5.5\build\native\Microsoft.WindowsAppSDK.AI.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.AI.2.5.5\build\native\Microsoft.WindowsAppSDK.AI.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Foundation.2.3.12\build\native\Microsoft.WindowsAppSDK.Foundation.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Foundation.2.3.12\build\native\Microsoft.WindowsAppSDK.Foundation.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.InteractiveExperiences.2.1.9\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.InteractiveExperiences.2.1.9\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.ML.2.1.94\build\native\Microsoft.WindowsAppSDK.ML.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.ML.2.1.94\build\native\Microsoft.WindowsAppSDK.ML.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Runtime.2.5.1\build\native\Microsoft.WindowsAppSDK.Runtime.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Runtime.2.5.1\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Search.2.5.5\build\native\Microsoft.WindowsAppSDK.Search.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Search.2.5.5\build\native\Microsoft.WindowsAppSDK.Search.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.Widgets.2.0.5\build\native\Microsoft.WindowsAppSDK.Widgets.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.Widgets.2.0.5\build\native\Microsoft.WindowsAppSDK.Widgets.targets')" />
+  <Import Project="$(AppPackages)Microsoft.WindowsAppSDK.WinUI.2.3.9\build\native\Microsoft.WindowsAppSDK.WinUI.targets" Condition="Exists('$(AppPackages)Microsoft.WindowsAppSDK.WinUI.2.3.9\build\native\Microsoft.WindowsAppSDK.WinUI.targets')" />
+  <Target Name="ValidateArchitecture" BeforeTargets="PrepareForBuild"><Error Condition="'$(Platform)'!='x64'" Text="Win2Air requires x64." /></Target>
+  <ItemGroup><ClCompile Include="..\src\Audio\SilenceDetector.cpp" /><ClCompile Include="..\src\Streaming\LatencyController.cpp" /><ClCompile Include="..\src\UI\StreamingSettings.cpp" /><ClCompile Include="..\src\UI\ViewModels\StreamingViewModel.cpp" /></ItemGroup>
+  <Target Name="CopyStreamingPage" AfterTargets="Build"><Copy SourceFiles="$(MSBuildThisFileDirectory)..\src\UI\StreamingSettings.xaml" DestinationFolder="$(OutDir)" /></Target>
+  <ItemGroup><ClCompile Include="..\src\Streaming\ReconnectController.cpp" /><ClCompile Include="..\src\App\PowerNotifications.cpp" /></ItemGroup>
+  <ItemDefinitionGroup><Link><AdditionalDependencies>iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies></Link></ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="..\src\Metrics\MetricsCollector.cpp" /><ClCompile Include="..\src\Metrics\MetricsHistory.cpp" /><ClCompile Include="..\src\Metrics\HealthEvaluator.cpp" /><ClCompile Include="..\src\Diagnostics\DiagnosticsExporter.cpp" /><ClCompile Include="..\src\UI\ViewModels\StatisticsViewModel.cpp" /><ClCompile Include="..\src\UI\StatisticsPage.cpp" /><ClCompile Include="..\src\UI\StatisticsPageRender.cpp" /></ItemGroup>
+  <Target Name="CopyStatisticsPage" AfterTargets="Build"><Copy SourceFiles="$(MSBuildThisFileDirectory)..\src\UI\StatisticsPage.xaml" DestinationFolder="$(OutDir)" /></Target>
+  <ItemGroup><ClCompile Include="..\src\UI\SettingsPage.cpp" /><ClCompile Include="..\src\UI\ViewModels\SettingsViewModel.cpp" /></ItemGroup>
+  <Target Name="CopyAppearanceResources" AfterTargets="Build"><Copy SourceFiles="$(MSBuildThisFileDirectory)..\resources\ThemeResources.xaml" DestinationFolder="$(OutDir)" /></Target>
+  <ItemGroup><ThirdPartyLicense Include="$(MSBuildThisFileDirectory)..\..\airplay2-sender-core\LICENSES\*.txt" /></ItemGroup>
+  <Target Name="CopyThirdPartyLicenses" AfterTargets="Build"><Copy SourceFiles="@(ThirdPartyLicense)" DestinationFiles="@(ThirdPartyLicense->'$(OutDir)Licenses\%(Filename)%(Extension)')" SkipUnchangedFiles="true" /></Target>
+  <Target Name="CopyMicrosoftLicenseNotices" AfterTargets="Build"><Copy SourceFiles="$(MSBuildThisFileDirectory)..\packages\Microsoft.WindowsAppSDK.2.5.1\license.txt" DestinationFolder="$(OutDir)Licenses\WindowsAppSDK" SkipUnchangedFiles="true" /><Copy SourceFiles="$(MSBuildThisFileDirectory)..\packages\Microsoft.WindowsAppSDK.WinUI.2.3.9\license.txt;$(MSBuildThisFileDirectory)..\packages\Microsoft.WindowsAppSDK.WinUI.2.3.9\NOTICE.txt" DestinationFolder="$(OutDir)Licenses\WinUI" SkipUnchangedFiles="true" /></Target>
+  <Import Project="..\scripts\visual-studio.targets" />
+  <ItemGroup><ClCompile Include="..\src\App\SystemMediaSession.cpp" /><ClCompile Include="..\src\App\StorePreview.cpp" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Charts\Win2Air.Charts.csproj">
+      <Project>{B64FE47C-F710-4C4E-9A45-904D651E5BEA}</Project>
+      <GlobalPropertiesToRemove>WindowsAppSDKSelfContained;UseXamlCompilerExecutable;XamlLanguage</GlobalPropertiesToRemove>
+    </ProjectReference>
+    <Manifest Include="Win2Air.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\resources\App.rc" />
+    <ApplicationAsset Include="..\resources\Assets\*" />
+  </ItemGroup>
+  <ItemDefinitionGroup><ResourceCompile><AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ResourceCompile></ItemDefinitionGroup>
+  <Target Name="CopyApplicationAssets" AfterTargets="Build"><Copy SourceFiles="@(ApplicationAsset)" DestinationFolder="$(OutDir)Assets" SkipUnchangedFiles="true" /></Target>
+</Project>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win2Air", "Win2Air\Win2Air.vcxproj", "{2D57FC45-664B-4B9F-9711-3C4A8833C2B4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win2Air.Tests", "tests\Win2Air.Tests.vcxproj", "{64897A59-C94A-4B0C-89B2-B40B54ED73D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win2Air.Charts", "Charts\Win2Air.Charts.csproj", "{B64FE47C-F710-4C4E-9A45-904D651E5BEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B64FE47C-F710-4C4E-9A45-904D651E5BEA}.Debug|x64.ActiveCfg = Debug|x64
+		{B64FE47C-F710-4C4E-9A45-904D651E5BEA}.Debug|x64.Build.0 = Debug|x64
+		{B64FE47C-F710-4C4E-9A45-904D651E5BEA}.Release|x64.ActiveCfg = Release|x64
+		{B64FE47C-F710-4C4E-9A45-904D651E5BEA}.Release|x64.Build.0 = Release|x64
+		{2D57FC45-664B-4B9F-9711-3C4A8833C2B4}.Debug|x64.ActiveCfg = Debug|x64
+		{2D57FC45-664B-4B9F-9711-3C4A8833C2B4}.Debug|x64.Build.0 = Debug|x64
+		{2D57FC45-664B-4B9F-9711-3C4A8833C2B4}.Release|x64.ActiveCfg = Release|x64
+		{2D57FC45-664B-4B9F-9711-3C4A8833C2B4}.Release|x64.Build.0 = Release|x64
+		{64897A59-C94A-4B0C-89B2-B40B54ED73D0}.Debug|x64.ActiveCfg = Debug|x64
+		{64897A59-C94A-4B0C-89B2-B40B54ED73D0}.Debug|x64.Build.0 = Debug|x64
+		{64897A59-C94A-4B0C-89B2-B40B54ED73D0}.Release|x64.ActiveCfg = Release|x64
+		{64897A59-C94A-4B0C-89B2-B40B54ED73D0}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

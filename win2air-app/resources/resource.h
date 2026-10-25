@@ -1,0 +1,3 @@
+#pragma once
+#define IDI_WIN2AIR 101
+#define IDI_WIN2AIR_DISCONNECTED 102

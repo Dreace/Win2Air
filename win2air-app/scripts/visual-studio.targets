@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- Native sources are built by Ninja, so the IDE must enter MSBuild even when App objects are current. -->
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    <Win2AirRoot>$(MSBuildThisFileDirectory)..\</Win2AirRoot>
+    <Win2AirSenderRoot>$(Win2AirRoot)..\airplay2-sender-core\</Win2AirSenderRoot>
+    <Win2AirSenderPreset Condition="'$(Configuration)'=='Release'">windows-app-dll-release</Win2AirSenderPreset>
+    <Win2AirSenderPreset Condition="'$(Configuration)'!='Release'">windows-app-dll</Win2AirSenderPreset>
+    <Win2AirCMake Condition="'$(Win2AirCMake)'==''">$(VSInstallDir)Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe</Win2AirCMake>
+    <Win2AirNinja>$(VSInstallDir)Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe</Win2AirNinja>
+    <Win2AirDependencyPrefix Condition="'$(Win2AirDependencyPrefix)'==''">$(WIN2AIR_DEPENDENCY_PREFIX)</Win2AirDependencyPrefix>
+    <Win2AirDependencyArgument Condition="'$(Win2AirDependencyPrefix)'!=''">-DAIRPLAY2_WINDOWS_DEPENDENCIES=&quot;$(Win2AirDependencyPrefix)&quot;</Win2AirDependencyArgument>
+    <Win2AirSdkTools>$(WindowsSdkDir)bin\$(WindowsTargetPlatformVersion)\x64</Win2AirSdkTools>
+  </PropertyGroup>
+  <!-- Use the verified native compiler for the C ABI DLL; the desktop app stays on MSVC. -->
+  <Target Name="BuildWin2AirSender" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)'!='true'">
+    <Error Condition="!Exists('$(AppPackages)Microsoft.WindowsAppSDK.WinUI.2.3.9\build\native\Microsoft.WindowsAppSDK.WinUI.targets')" Text="Restore the solution NuGet packages before building Win2Air." />
+    <Error Condition="!Exists('$(Win2AirCMake)')" Text="Install Visual Studio C++ CMake tools, or set Win2AirCMake to cmake.exe." />
+    <Exec WorkingDirectory="$(Win2AirSenderRoot)" Condition="!Exists('$(Win2AirSenderRoot)out\$(Win2AirSenderPreset)\CMakeCache.txt')" Command="&quot;$(Win2AirCMake)&quot; --preset $(Win2AirSenderPreset) -DCMAKE_MAKE_PROGRAM=&quot;$(Win2AirNinja)&quot; $(Win2AirDependencyArgument)" />
+    <Exec WorkingDirectory="$(Win2AirSenderRoot)" Command="&quot;$(Win2AirCMake)&quot; --build --preset $(Win2AirSenderPreset) --target airplay2_sender_shared --parallel 4" />
+  </Target>
+  <!-- F5 uses the same unpackaged resources as the command-line build. This mode never calls MSBuild again. -->
+  <Target Name="PrepareWin2AirRun" AfterTargets="Build" Condition="'$(DesignTimeBuild)'!='true'">
+    <Exec Command="&quot;$(Win2AirCMake)&quot; -DPREPARE_ONLY=ON -DCONFIGURATION=$(Configuration) -DSDK_DLL=&quot;$(Win2AirSenderRoot)out\$(Win2AirSenderPreset)\airplay2_sender.dll&quot; -DSDK_TOOLS=&quot;$(Win2AirSdkTools)&quot; -P &quot;$(Win2AirRoot)scripts\build-app.cmake&quot;" />
+  </Target>
+</Project>

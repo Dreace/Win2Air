@@ -1,0 +1,20 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="../Win2Air/Win2Air.vcxproj" />
+  <PropertyGroup>
+    <TargetName>Win2Air.ConnectedMemory.Tests</TargetName>
+    <TargetPath>$(OutDir)$(TargetName).exe</TargetPath>
+    <IntDir>$(MSBuildThisFileDirectory)..\out\obj\ConnectedMemory\$(Configuration)\</IntDir>
+    <UserApplicationManifest>$(MSBuildThisFileDirectory)..\Win2Air\Win2Air.exe.manifest</UserApplicationManifest>
+    <SelfContainedIntermediateOutputPath>$(IntDir)</SelfContainedIntermediateOutputPath>
+    <ApplicationManifest>$(UserApplicationManifest)</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Remove="@(ClCompile)" />
+    <Manifest Remove="@(Manifest)" />
+    <Manifest Include="$(UserApplicationManifest)" />
+    <ClCompile Include="ui/connected_memory.cpp" />
+    <ClCompile Include="fixtures/AudioFixture.cpp;fixtures/ReceiverFixture.cpp" />
+    <Object Include="../out/obj/Win2Air/$(Configuration)/*.obj" Exclude="../out/obj/Win2Air/$(Configuration)/AppHost*.obj;../out/obj/Win2Air/$(Configuration)/*AutoInitializer*.obj" />
+  </ItemGroup>
+  <ItemDefinitionGroup><ClCompile><AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\out\obj\Win2Air\$(Configuration)\Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ClCompile></ItemDefinitionGroup>
+</Project>

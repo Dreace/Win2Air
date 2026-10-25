@@ -1,0 +1,89 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "windows-app-dll-release", "inherits": "windows-app-dll",
+            "binaryDir": "${sourceDir}/out/windows-app-dll-release",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+        },
+        {
+            "name": "windows-app-dll", "inherits": "windows-native",
+            "binaryDir": "${sourceDir}/out/windows-app-dll",
+            "cacheVariables": {
+                "AIRPLAY2_BUILD_SHARED": "ON"
+            }
+        },
+        {
+            "name": "linux-reference",
+            "generator": "Ninja",
+            "binaryDir": "/tmp/win2air-core-build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "AIRPLAY2_BUILD_PROTOCOL": "ON",
+                "BUILD_TESTING": "ON"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "windows-native",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/windows-native",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "${sourceDir}/out/windows-toolchain/mingw64/bin/gcc.exe",
+                "AIRPLAY2_WINDOWS_DEPENDENCIES": "${sourceDir}/out/windows-dependencies",
+                "AIRPLAY2_BUILD_PROTOCOL": "ON",
+                "BUILD_TESTING": "ON"
+            },
+            "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Windows" }
+        },
+        {
+            "name": "Visual Studio Community 2022 Release - amd64",
+            "displayName": "Visual Studio Community 2022 Release - amd64",
+            "description": "将编译器用于 Visual Studio 17 2022 (x64 体系结构)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        }
+    ],
+    "buildPresets": [
+        { "name": "windows-app-dll-release", "configurePreset": "windows-app-dll-release" },
+        { "name": "windows-app-dll", "configurePreset": "windows-app-dll" },
+        { "name": "windows-native", "configurePreset": "windows-native" },
+        {
+            "name": "linux-reference",
+            "configurePreset": "linux-reference"
+        },
+        {
+            "name": "Visual Studio Community 2022 Release - amd64-debug",
+            "displayName": "Visual Studio Community 2022 Release - amd64 - Debug",
+            "configurePreset": "Visual Studio Community 2022 Release - amd64",
+            "configuration": "Debug"
+        }
+    ],
+    "testPresets": [
+        { "name": "windows-app-dll-release", "configurePreset": "windows-app-dll-release", "output": { "outputOnFailure": true }, "execution": { "noTestsAction": "error" } },
+        { "name": "windows-app-dll", "configurePreset": "windows-app-dll", "output": { "outputOnFailure": true }, "execution": { "noTestsAction": "error" } },
+        { "name": "windows-native", "configurePreset": "windows-native", "output": { "outputOnFailure": true }, "execution": { "noTestsAction": "error" } },
+        {
+            "name": "linux-reference",
+            "configurePreset": "linux-reference",
+            "output": {
+                "outputOnFailure": true
+            },
+            "execution": {
+                "noTestsAction": "error"
+            }
+        }
+    ]
+}

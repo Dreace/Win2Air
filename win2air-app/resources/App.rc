@@ -1,0 +1,4 @@
+#include "resource.h"
+
+IDI_WIN2AIR ICON "Assets\\Win2Air.ico"
+IDI_WIN2AIR_DISCONNECTED ICON "Assets\\Win2AirDisconnected.ico"
